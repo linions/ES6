@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ?.
+        function main(com){
+           const dbhost=com&&com.db&&com.db.host;
+           const dbHost=com?.oq?.host;
+           console.log(dbhost);
+           console.log(dbHost);
+        }
+
+        main({
+            db:{
+                host:'127.0.0.1',
+                passport:'root',
+            },
+            oq:{
+                host:'123.4.3.5',
+                passport:'root23'
+            }
+        })
+    </script>
+</body>
+</html>

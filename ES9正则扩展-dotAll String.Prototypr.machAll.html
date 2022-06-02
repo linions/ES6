@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //dot   .   元字符   表示除了换行符以外的任何字符
+        let str = `<ul>
+                  <li>
+                     <a>a</a>
+                     <p>沈腾</p>
+                  </li>
+                  <li>
+                    <a>b</a>
+                    <p>玛丽</p>
+                  </li>
+                 </ul>`;
+        // 正则声明
+        const reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/gs;
+        // 执行匹配
+        // let result;
+        // let data=[];
+        // while(result=reg.exec(str)){
+        //     data.push({title:result[1], time:result[2]});
+        // }
+        // console.log(reg.exec(str));
+        // console.log(data);
+
+        // 数组的批量提取
+        const res=str.matchAll(reg);
+        // console.log(res);
+        // for(let v of res){
+        //     console.log(v);
+        // }
+        arr=[...res];
+        console.log(arr);
+    </script>
+</body>
+</html>

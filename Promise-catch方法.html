@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const p = new Promise((resolve, reject) => {
+             setTimeout(()=>{
+                 reject("出错啦！");
+             },1000);
+         });
+        //  与p.then没有什么区别，知识不要第一个函数，只存在处理错误的函数而已
+         p.catch(function(reason){
+             console.warn(reason);
+         });
+    </script>
+</body>
+</html>

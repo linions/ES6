@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const p1=new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve('1');
+            },1000)
+        });
+    const p2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            // resolve('2');
+            reject("出错啦！");
+        }, 1000)
+    });
+
+    // 调用 allsettled方法
+    // 此方法返回的Promise值都是成功值
+    const result=Promise.allSettled([p1,p2]);
+    // 此方法返回的Promise值只有全部为成功才会返回成功，否则就是失败
+    const res=Promise.all([p1,p2]);
+    console.log(res);
+    console.log(result);
+
+
+    </script>
+</body>
+</html>

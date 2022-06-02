@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 这个方法用来创建一个对象，但是它比较特殊，接收一个二维数组或者是Map
+        
+        // 二维数组
+        const result=Object.fromEntries([
+            ['a','b'],
+            ['c','d']
+        ])
+        console.log(result);
+       
+        // Map
+        const m=new Map();
+        m.set('f','g');
+        m.set('h','i');
+        const n=Object.fromEntries(m);
+        console.log(n);
+
+
+    // 这个运算与Object.entries()互为逆运算
+    // Object.entries是将对象转化为一个二维数组
+    // Object.fromEntries是将一个二维数组转化为一个对象
+    </script>
+</body>
+</html>

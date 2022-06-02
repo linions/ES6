@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ES5
+        // 手机
+    //     function Phone(brand, price) {
+    //             this.brand = brand;
+    //             this.price = price;
+    //         } 
+    //  Phone.prototype.call = function () {
+    //         console.log('我可以打电话！');
+    //     }
+    
+        // 智能手机
+        // function smartPhone(brand,price,color,size){
+        //       Phone.call(this,brand,price);
+        //       this.color=color;
+        //       this.size=size;
+        // }
+
+
+        // 设置子类构造方法原型
+        // smartPhone.prototype=new Phone;
+        // smartPhone.prototype.constructor=smartPhone;
+        
+        // 声明子类的方法
+        // smartPhone.prototype.photo=function(){
+        //     console.log('我可以拍照！');
+        // }
+        // const chuizi=new smartPhone('锤子',4399,'黑色','5.5inch');
+        // console.log(chuizi);
+
+    //    ES6
+    class Phone{
+        constructor(brand,price){
+           this.brand=brand;
+           this.price=price;
+        }
+
+        call(){
+            constructor.log('我可以打电话！');
+        }
+    }
+
+    class smartPhone extends Phone{
+        constructor(brand,price,color,size){
+            super(brand,price);
+            this.color=constructor;
+            this.size=size;
+        }
+
+        //重写
+        call(){
+            console.log('我可以视频通话');
+        }
+        photo(){
+            console.log('我可以拍照');
+        }
+    }
+
+    const Xiaomi=new smartPhone('小米',799,'黑色','5.5inch');
+    console.log(Xiaomi);
+    </script>
+</body>
+</html>

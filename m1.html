@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+        // 通用方式
+      //引入 m1.js模块内容
+    //   import *as m1 from "./m1.js";
+    //   console.log(m1);
+    //   m1.default.change();
+
+    // 解构赋值形式
+    // import {school,teach} from "./m1.js";
+    // 如果变量名有重复那么就用别名 as 例如：school as guigu 然后以后要用到school的地方一律为guuigu
+    
+    // 默认导入方式
+    // import {default as m1} from "./m1.js"; 此处必须取别名
+    // console.log(m1);
+
+    // 简便模式 值针对默认模式
+    import m1 from "./m1.js";
+    console.log(m1);
+
+    // 引入方式还可以为：
+    // <script type="moduel" src="入口文件路径">
+    </script>
+</body>
+</html>
