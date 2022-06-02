@@ -1,1 +1,1 @@
-# ES6-learning
+# ES6
